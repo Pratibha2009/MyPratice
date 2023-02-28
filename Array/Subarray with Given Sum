@@ -1,0 +1,53 @@
+Given an unsorted array A of size N that contains only non-negative integers, find a continuous sub-array that adds to a given number S and return the left and right index(1-based indexing) of that subarray.
+
+In case of multiple subarrays, return the subarray indexes which come first on moving from left to right.
+
+Note:- You have to return an ArrayList consisting of two elements left and right. In case no such subarray exists return an array consisting of element -1.
+
+Example 1:
+
+Input:
+N = 5, S = 12
+A[] = {1,2,3,7,5}
+Output: 2 4
+Explanation: The sum of elements 
+from 2nd position to 4th position 
+is 12.
+
+
+
+Solution:
+
+
+class Solution
+{
+    public:
+    //Function to find a continuous sub-array which adds up to a given number.
+    vector<int> subarraySum(vector<int>arr, int n, long long s)
+    {
+        // Your code here
+        int left =0;
+        int right=0;
+        long long sum = arr[left];
+        
+        while(left<=right && right<n) {
+            if(sum == s) {
+                return {left+1, right+1};
+            }
+            else if(sum < s) {
+              right+=1;
+              sum = sum+arr[right];
+            }
+            else {
+                sum = sum-arr[left];
+                left+=1;
+                if(left > right) {
+                    right+=1;
+                    sum += arr[right];
+                }
+            }
+            // cout<<"left "<<left<<" right "<<right<<" sum "<<sum<<"\n";
+        }
+        return {-1};
+    }
+};
