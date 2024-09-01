@@ -1,0 +1,16 @@
+Patterns for Coding problems: 
+1. Prefix Sum pattern  - Wherever we need subarray sum in constant time complexity O(1)
+2. Two Pointers pattern -  
+3. Sliding Window pattern - you need to return a subarray satisfying some condition . 
+4. Fast and slow pointers - used to find cycle in a linked list, or middle node in a linked list etc.
+5. Monotonic stack - it is used to find the next greater or next smaller element in the array. 
+6. Top 'k' elements pattern - use heap 
+7. Overlapping intervals pattern - 
+8. Modified binary search pattern
+9. Binary tree traversal -  Preorder, postorder or inorder
+10. DFS or BFS
+11. Dynamic programming
+12. 
+13.
+
+
